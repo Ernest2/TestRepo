@@ -11,7 +11,7 @@ ${REMOTE_URL}     http://${KEY}@ondemand.saucelabs.com:80/wd/hub
 
 *** Keywords ***
 Open test browser
-    Open browser    http://www.google.com    browser=${BROWSER}    remote_url=${REMOTE_URL}    desired_capabilities=${CAPABILITIES}
+    Open browser    https://www.tn.com.ar    browser=${BROWSER}    remote_url=${REMOTE_URL}    desired_capabilities=${CAPABILITIES}
     Comment    Log To Console    SauceOnDemandSessionID=<${SAUCE_SESSION_ID}> job-name=<%JENKINS_BUILD_NUMBER>
 
 Close test browser
