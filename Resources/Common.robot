@@ -3,7 +3,7 @@ Library           Selenium2Library
 Library           SauceLabs.py
 
 *** Variables ***
-@{_tmp}           browserName: %{SELENIUM_BROWSER},    platform: %{SELENIUM_PLATFORM},    version: %{SELENIUM_VERSION},    name: ${TEST_NAME}    build: %{JENKINS_BUILD_NUMBER}
+@{_tmp}           browserName: %{SELENIUM_BROWSER},    platform: %{SELENIUM_PLATFORM},    version: %{SELENIUM_VERSION},    name: %{JENKINS_BUILD_NUMBER}    build: %{JENKINS_BUILD_NUMBER}
 ${BROWSER}        %{SELENIUM_BROWSER}
 ${CAPABILITIES}    ${EMPTY.join(${_tmp})}
 ${KEY}            %{SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}
