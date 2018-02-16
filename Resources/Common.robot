@@ -15,7 +15,9 @@ Open test browser
     Comment    Log To Console    SauceOnDemandSessionID=<${SAUCE_SESSION_ID}> job-name=<%JENKINS_BUILD_NUMBER>
 
 Close test browser
-    Run keyword if    '${REMOTE_URL}' != ''    Report Sauce status    ${TEST_NAME}    ${TEST_STATUS}
+    Comment    Run keyword if    '${REMOTE_URL}' != ''    Report Sauce status    ${TEST_NAME}    ${TEST_STATUS}
+    ${sauceSessionId}=    Report Sauce status    ${TEST_NAME}    ${TEST_STATUS}
+    Log To Console    ${sauceSessionId]}
     Close all browsers
 
 Wait
