@@ -8,7 +8,6 @@ ${BROWSER}        %{SELENIUM_BROWSER}
 ${CAPABILITIES}    ${EMPTY.join(${_tmp})}
 ${KEY}            %{SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}
 ${REMOTE_URL}     http://${KEY}@ondemand.saucelabs.com:80/wd/hub
-${PAGE_TITLE}     Sauce Labs: Login
 
 *** Keywords ***
 Open test browser
@@ -18,3 +17,6 @@ Open test browser
 Close test browser
     Run keyword if    '${REMOTE_URL}' != ''    Report Sauce status    ${TEST_NAME}    ${TEST_STATUS}
     Close all browsers
+
+Wait
+    sleep    10s

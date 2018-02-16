@@ -1,14 +1,13 @@
 *** Settings ***
+Test Setup        Common.Open test browser
+Test Teardown     Common.Close test browser
+Resource          ../Resources/Common.robot
 
-Resource  ../Resources/Common.robot
-
-Test Setup  Common.Open test browser
-Test Teardown  Common.Close test browser
- 
 *** Variables ***
 
 *** Test Cases ***
-
-Example of connecting to Sauce via Robot Framework 
-
-	Page should contain  google
+Prueba Tn En Saucelabs
+    [Setup]    Open test browser
+    Page should contain    Todo Noticias
+    Wait
+    [Teardown]    Close test browser
