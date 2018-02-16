@@ -17,7 +17,7 @@ Open test browser
 Close test browser
     Comment    Run keyword if    '${REMOTE_URL}' != ''    Report Sauce status    ${TEST_NAME}    ${TEST_STATUS}
     ${sauceSessionId}=    Report Sauce status    ${TEST_NAME}    ${TEST_STATUS}
-    Log To Console    ${sauceSessionId]}
+    Log To Console    ${sauceSessionId}
     Close all browsers
 
 Wait
